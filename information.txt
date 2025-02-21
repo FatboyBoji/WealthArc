@@ -1,0 +1,22 @@
+i am building a budgeting web application witha 2 aspects. 
+one mobile version that will do one thing. and the desktop application will be able to the same but more.
+
+
+design/theme:
+
+font: Chakra Petch
+Header 32/150
+button size 18/150
+text size 14/150
+
+
+color palete
+
+Background: 192A38
+ primary: 09BC8A
+ secondary: 004346
+ also those 2: 212121, F3FFFC
+
+
+ we will have a frontend - nextjS , tailwindCSS, js
+ and a backend           - nodeJS , postgres 
