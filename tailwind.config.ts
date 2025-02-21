@@ -11,7 +11,18 @@ const config: Config = {
     extend: {
       colors: {
         background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: "var(--primary)",
+        secondary: "var(--secondary)",
+        dark: "var(--dark)",
+        light: "var(--light)",
+      },
+      fontSize: {
+        'header': ['2rem', '150%'],    // 32px
+        'button': ['1.125rem', '150%'], // 18px
+        'body': ['0.875rem', '150%'],   // 14px
+      },
+      fontFamily: {
+        sans: ['var(--font-primary)', 'sans-serif'],
       },
       scale: {
         '102': '1.02',
@@ -36,8 +47,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-  ],
+  plugins: [],
 };
+
 export default config;

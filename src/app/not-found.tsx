@@ -2,23 +2,23 @@
 
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import Navbar from '../components/ui/navbar';
-import SesaBG from '../components/ui/sesa_background';
-import SesaIcon from '../components/ui/icons/sesalogoComb';
-import Footer from '@/components/ui/Footer';
+// import Navbar from '../components/ui/navbar';
+// import SesaBG from '../components/ui/sesa_background';
+// import SesaIcon from '../components/ui/icons/sesalogoComb';
+// import Footer from '@/components/ui/Footer';
 
 export default function NotFound() {
   const router = useRouter();
 
   return (
     <div className="min-h-screen flex flex-col relative">
-      <div className="absolute inset-0 z-0">
+      {/* <div className="absolute inset-0 z-0">
         <SesaBG />
-      </div>
+      </div> */}
 
       {/*--------------------------------------------- Main body ---------------------------------------------*/}
       <div className="relative z-10 flex flex-col min-h-screen">
-        <Navbar />
+        {/* <Navbar /> */}
 
         <main className="flex-grow flex items-center justify-center px-6 py-12">
           <div className="max-w-2xl mx-auto text-center">
@@ -72,7 +72,7 @@ export default function NotFound() {
           </div>
         </main>
 
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </div>
   );

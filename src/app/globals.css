@@ -2,54 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Import React Quill styles */
-/* @import 'react-quill/dist/quill.snow.css'; */
-
-/* Define @font-face for Inter font */
-@font-face {
-  font-family: 'Inter';
-  src: url('./fonts/Inter-Regular.woff') format('woff'), /* Regular weight */
-       url('./fonts/Inter-SemiBold.woff2') format('woff2'); /* SemiBold weight */
-  font-weight: 400; /* Regular weight */
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url('./fonts/Inter-SemiBold.woff2') format('woff2'); /* SemiBold weight */
-  font-weight: 600; /* SemiBold weight */
-  font-style: normal;
-}
-
 :root {
-  --font-scale: 1.1; 
-
-  --background: #D5DFFF;
+  --background: #192A38;
+  --primary: #09BC8A;
+  --secondary: #004346;
+  --dark: #212121;
+  --light: #F3FFFC;
+  --font-primary: 'Chakra Petch';
+  /* --background: #D5DFFF;
   --foreground: #171717;
   --font-primary: 'Inter', sans-serif;
   --font-secondary: 'Georgia', serif;
-  --font-size-xs: calc(0.75rem * var(--font-scale)); /* 12px */
-  --font-size-sm: calc(0.875rem * var(--font-scale)); /* 14px */
-  --font-size-base: calc(1rem * var(--font-scale)); /* 16px */
-  --font-size-lg: calc(1.125rem * var(--font-scale)); /* 18px */
-  --font-size-xl: calc(1.25rem * var(--font-scale)); /* 20px */
-  --font-size-2xl: calc(1.5rem * var(--font-scale)); /* 24px */
-  --font-size-3xl: calc(1.875rem * var(--font-scale)); /* 30px */
-  --sidebar-width: 0px; /* 72rem = 288px */
+  --font-size-xs: calc(0.75rem * var(--font-scale)); 
+  --font-size-sm: calc(0.875rem * var(--font-scale)); 
+  --font-size-base: calc(1rem * var(--font-scale)); 
+  --font-size-lg: calc(1.125rem * var(--font-scale)); 
+  --font-size-xl: calc(1.25rem * var(--font-scale)); 
+  --font-size-2xl: calc(1.5rem * var(--font-scale)); 
+  --font-size-3xl: calc(1.875rem * var(--font-scale)); 
+  --sidebar-width: 0px; 72rem = 288px */
 }
 
-/* Remove or comment out the dark mode media query since we want the same color always */
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #D5DFFF;
-    --foreground: #ededed;
-  }
-} */
-
 body {
-  color: var(--foreground);
+  color: var(--light);
   background: var(--background);
-  font-family: var(--font-primary); 
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-header font-medium;
+  }
+
+  button {
+    @apply text-button;
+  }
+
+  p {
+    @apply text-body;
+  }
+}
+
+@layer components {
+  .nav-item {
+    @apply text-button text-light hover:text-primary transition-colors;
+  }
+
+  .card {
+    @apply bg-secondary rounded-lg p-4;
+  }
 }
 
 .text-sm {
@@ -109,20 +109,6 @@ img, svg {
   backdrop-filter: blur(10px);
 }
 
-.service-card {
-  @apply bg-white rounded-lg shadow-md p-6 border border-gray-100 
-    transition-all duration-300 hover:scale-105 hover:shadow-xl
-    relative z-10;
-}
-
-.service-card:hover {
-  transform: translateY(-4px);
-  background: linear-gradient(to bottom right, rgba(255, 255, 255, 1), rgba(248, 250, 252, 1));
-}
-
-.service-badge {
-  @apply text-xs px-2 py-1 rounded-full font-medium;
-}
 
 .service-card:hover {
   background: linear-gradient(to bottom right, white, #f8fafc);

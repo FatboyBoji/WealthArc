@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { authService } from '@/services/api';
 import Image from 'next/image';
-import SesaIcon from '../../../components/icons/sesalogoComb';
+// import SesaIcon from '../../../components/icons/sesalogoComb';
 
 export default function LoginPage() {
     const router = useRouter();
@@ -34,9 +34,9 @@ export default function LoginPage() {
         <div className="min-h-screen flex items-center justify-center bg-gray-400 py-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-md w-full space-y-8">
                 <div>
-                    <div className="relative w-100 h-100 mx-auto pb-5">
+                    {/* <div className="relative w-100 h-100 mx-auto pb-5">
                         <SesaIcon className={`text-black w-full h-full`} />
-                    </div>
+                    </div> */}
                     <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
                         Admin Login
                     </h2>
